@@ -60,7 +60,7 @@ jobs:
       - name: Build Docker Image
         if: success()
         run: |
-          docker build -t ${{secrets.DAGS_HUB_USERNAME}}/sentiment_analysis:v2
+          docker build -t ${{secrets.DAGS_HUB_USERNAME}}/sentiment_analysis:v2 .
 
       - name: Push Docker image to Docker hub
         if: success()
