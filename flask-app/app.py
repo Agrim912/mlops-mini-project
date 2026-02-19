@@ -5,8 +5,13 @@ import dagshub
 import pickle
 import os
 from mlflow import MlflowClient
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Set up DagsHub credentials for MLflow tracking
-dagshub_token = os.getenv("DAGSHUB_PAT")
+dagshub_token = "ae1da4affb727c1edc1942e3c27d6c84ee917997"
+print(dagshub_token)
 if not dagshub_token:
     raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
 
